@@ -1,10 +1,9 @@
 import 'dotenv/config'
-// import 'module-alias/register'
 import express from 'express'
 import cors, { CorsOptions } from 'cors'
 import cookieParser from 'cookie-parser'
-import router from './routes/index'
-import { errorHandler } from 'middleware/error.middleware'
+import router from '~/routes/index'
+import { errorHandler } from '~/middleware/error.middleware'
 
 const PORT = process.env.PORT || 6000;
 const CLIENT_URL = process.env.CLIENT_URL

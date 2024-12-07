@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
-import { prisma } from './../prisma/'
-import { IPayload } from 'interfaces/IPayload'
+import { prisma } from '~/prisma/'
+import { IPayload } from '~/interfaces/IPayload'
 
 export interface IGenerateTokens {
     accessToken: string

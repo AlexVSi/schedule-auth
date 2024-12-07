@@ -1,8 +1,8 @@
-import { prisma } from './../prisma/'
+import { prisma } from '~/prisma'
 import bcrypt from 'bcryptjs'
 import tokenService from './token.service'
-import ApiError from 'exceptions/api.error'
-import { IUser } from 'interfaces/IUser'
+import ApiError from '~/exceptions/api.error'
+import { IUser } from '~/interfaces/IUser'
 
 class AuthService {
     async registration(body: Omit<IUser, 'id'>) {

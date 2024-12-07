@@ -1,6 +1,6 @@
-import ApiError from "exceptions/api.error"
 import { Request, Response, NextFunction } from "express"
-import tokenService from "services/token.service"
+import ApiError from "~/exceptions/api.error"
+import tokenService from "~/services/token.service"
 
 interface IRequest extends Request {
     user?: any;
