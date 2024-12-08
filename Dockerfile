@@ -2,14 +2,13 @@ FROM node:lts
 
 WORKDIR /app
 
-ARG NODE_ENV=production
-ENV NODE_ENV=$NODE_ENV
-
 COPY package*.json ./
 
-RUN npm install
+RUN npm install && npm install -g typescript
 
 COPY . .
+
+RUN npx prisma generate
 
 EXPOSE 8888
 ENTRYPOINT [ "npm", "run", "build" ]

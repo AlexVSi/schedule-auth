@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.ts",
-    "build": "npx tsc && node -r module-alias/register dist/index.js"
+    "build": "tsc && node -r module-alias/register dist/index.js"
   },
   "_moduleAliases": {
     "~": "dist/"
@@ -40,6 +40,8 @@
   },
   "prisma": {
     "schema": "src/prisma/schema.prisma",
-    "seed": "ts-node src/prisma/seed.ts"
-  }
+    "seed": "ts-node src/prisma/seed.ts",
+    "generate": "src/prisma/schema.prisma"
+  },
+  "repository": "git@github.com:AlexVSi/schedule-auth.git"
 }

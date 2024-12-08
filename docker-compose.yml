@@ -1,0 +1,9 @@
+version: '1'
+
+services:
+  auth-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8888:8888
