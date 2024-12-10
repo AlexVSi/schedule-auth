@@ -18,7 +18,7 @@ const corsOptions: CorsOptions = {
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors(corsOptions))
-app.use('/api', router)
+app.use('/', router)
 app.use(errorHandler)
 
 const startApp = async (): Promise<void> => {
