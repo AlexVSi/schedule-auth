@@ -18,7 +18,7 @@ class AuthService {
                 password: hashPassword
             }
         })
-        const tokens = tokenService.generateTokens(user)
+        const tokens = tokenService.generateTokens({id: user.id, login: user.login})
         await tokenService.saveToken(user.id, tokens.refreshToken)
         return tokens
     }
@@ -34,7 +34,7 @@ class AuthService {
         if (!validPassword) {
             throw ApiError.BadRequest('Неверный пароль')
         }
-        const tokens = tokenService.generateTokens(user)
+        const tokens = tokenService.generateTokens({id: user.id, login: user.login})
         await tokenService.saveToken(user.id, tokens.refreshToken)
         return tokens
     }
@@ -62,7 +62,7 @@ class AuthService {
             throw ApiError.BadRequest('Пользователь не найден')
         }
 
-        const tokens = tokenService.generateTokens(user)
+        const tokens = tokenService.generateTokens({id: user.id, login: user.login})
         await tokenService.saveToken(user.id, tokens.refreshToken)
         return tokens
     }
