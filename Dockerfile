@@ -10,5 +10,5 @@ COPY . .
 
 RUN npx prisma generate
 
-EXPOSE 8888
+EXPOSE 7779
 ENTRYPOINT [ "npm", "run", "build" ]
