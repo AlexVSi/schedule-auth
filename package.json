@@ -41,7 +41,8 @@
   "prisma": {
     "schema": "src/prisma/schema.prisma",
     "seed": "ts-node src/prisma/seed.ts",
-    "generate": "src/prisma/schema.prisma"
+    "generate": "src/prisma/schema.prisma",
+    "migrate": "src/prisma/schema.prisma"
   },
   "repository": "git@github.com:AlexVSi/schedule-auth.git"
 }
