@@ -13,7 +13,7 @@ const auth = (req: IRequest, res: Response, next: NextFunction) => {
             return next(ApiError.UnauthorizedError())
         }
 
-        const accessToken = autorizationHeader.split(' ')[1]
+        const accessToken = autorizationHeader
         if (!accessToken) {
             return next(ApiError.UnauthorizedError())
         }
